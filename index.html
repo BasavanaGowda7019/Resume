@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Student Portfolio - Your Name</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    /* ---------- BASIC RESET ---------- */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+    }
+    img{
+      width:30px;
+      height:30px;
+      border-radius:50%;
+      vertical-align:middle;
+      margin-right:8px;
+    }
+    body {
+      transition: background 0.3s ease, color 0.3s ease;
+      line-height: 1.6;
+    }
+
+    body.light {
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    body.dark {
+      background: #111827;
+      color: #e5e7eb;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ---------- LAYOUT ---------- */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px 16px 40px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(148, 163, 184, 0.6);
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+
+    .nav-links a {
+      margin-left: 14px;
+      font-size: 0.95rem;
+      opacity: 0.85;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* ---------- THEME BUTTON ---------- */
+    #theme-toggle {
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      background: transparent;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    #theme-toggle:hover {
+      background: rgba(148, 163, 184, 0.15);
+    }
+
+    /* ---------- SECTIONS ---------- */
+    section {
+      margin-top: 28px;
+      padding: 18px 16px;
+      border-radius: 12px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: rgba(255, 255, 255, 0.7);
+    }
+
+    body.dark section {
+      background: rgba(15, 23, 42, 0.8);
+      border-color: rgba(55, 65, 81, 0.9);
+    }
+
+    section h2 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+      border-left: 4px solid #3b82f6;
+      padding-left: 8px;
+    }
+
+    /* ---------- HERO / ABOUT ---------- */
+    .hero-name {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .hero-tagline {
+      font-size: 0.95rem;
+      opacity: 0.9;
+      margin-bottom: 10px;
+    }
+
+    .hero-text {
+      font-size: 0.95rem;
+    }
+
+    /* ---------- SKILLS LIST ---------- */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .skill-card {
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      font-size: 0.9rem;
+    }
+
+    .skill-title {
+      font-weight: 600;
+      margin-bottom: 4px;
+      font-size: 0.9rem;
+    }
+
+    .skill-desc {
+      font-size: 0.82rem;
+      opacity: 0.85;
+    }
+
+    /* ---------- HOBBIES ---------- */
+    .hobby-list {
+      list-style: disc;
+      margin-left: 20px;
+      margin-top: 6px;
+      font-size: 0.95rem;
+    }
+
+    /* ---------- CONTACT ---------- */
+    .contact-item {
+      margin-top: 6px;
+      font-size: 0.95rem;
+    }
+
+    .contact-item span {
+      font-weight: 600;
+    }
+
+    .contact-note {
+      margin-top: 10px;
+      font-size: 0.85rem;
+      opacity: 0.9;
+    }
+
+    footer {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 0.8rem;
+      opacity: 0.75;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .nav-links {
+        font-size: 0.85rem;
+      }
+    }
+  </style>
+</head>
+<body class="light">
+  <div class="container">
+    <header>
+      <div class="logo"><img src="man.png" alt="user">Basavana Gowda S Patil</div>
+      <div style="display:flex; align-items:center; gap:10px;">
+        <nav class="nav-links">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#hobbies">Hobbies</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button id="theme-toggle">🌙 Dark Mode</button>
+      </div>
+    </header>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p class="hero-name">Basavana Gowda S Patil</p>
+      <p class="hero-tagline">B.E / B.Tech Student | Aspiring Software Developer</p>
+      <p class="hero-text">
+        Hi! I'm a student with a strong interest in programming and problem solving.
+        I’m currently learning C, Python, Java, web development (HTML, CSS, JavaScript),
+        Data Structures & Algorithms in C, and SQL for databases.
+        I enjoy building simple projects to improve my skills and understand core concepts better.
+      </p>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-title">C & DSA in C</div>
+          <div class="skill-desc">
+            Basic programs, loops, functions, pointers and data structures like arrays,
+            linked lists, stacks and queues.
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-title">Python</div>
+          <div class="skill-desc">
+            Writing simple scripts, working with input/output and solving logical problems.
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-title">Java</div>
+          <div class="skill-desc">
+            Basics of OOP (classes, objects, methods) and simple console applications.
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-title">HTML & CSS</div>
+          <div class="skill-desc">
+            Building basic web pages, creating layouts and styling content to look clean and simple.
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-title">JavaScript</div>
+          <div class="skill-desc">
+            Basic DOM manipulation and using JavaScript for features like theme switching.
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-title">SQL & Databases</div>
+          <div class="skill-desc">
+            Basic queries like SELECT, INSERT, UPDATE and understanding tables and relationships.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="hobbies">
+      <h2>Mini-Project : Agentic AI Student Peer Feedback Portal</h2>
+      <p>Key features of our work:</p>
+      <ul class="hobby-list">
+        <li>Students can give feeback ambiguosly, No issue of bias and favoritism</li>
+        <li>With AI students gain clear insights about their performance</li>
+        <li>Our system promotes skill enhacements through critical thinking,selfreflection and effective communication</li>
+        <li>Faculty and Administration can use structured reports to develop better teaching</li>
+        <li>Unlike one-time evaluation our platform provides continuous feedback through real-time feedbacks collected</li>
+      </ul>
+    </section>
+
+    <!-- HOBBIES SECTION -->
+    <section id="hobbies">
+      <h2>Hobbies</h2>
+      <p>When I'm not studying or coding, I like to:</p>
+      <ul class="hobby-list">
+        <li>Watch or play sports</li>
+        <li>Listen to music</li>
+        <li>Play mobile / PC games</li>
+        <li>Read about tech and gadgets</li>
+        <li>Spend time with friends and family</li>
+      </ul>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>If you’d like to connect, you can reach me here:</p>
+      <p class="contact-item">
+        <span>Email:</span>
+        <a href="mailto:your.email@example.com">basavanagowdas482@gmail.com</a>
+      </p>
+      <p class="contact-item">
+        <span>Phone:</span> +91-7019600452
+      </p>
+      <p class="contact-item">
+        <span>LinkedIn:</span>
+        <a href="https://www.linkedin.com/in/basavana-gowda-s-956419384" target="_blank">linkedin.com/in/basavana-gowda-s-956419384</a>
+      </p>
+      <p class="contact-note">
+        Feel free to contact me for internships, project collaboration, or any learning opportunities.
+      </p>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Basavana Gowda. All rights reserved.
+    </footer>
+  </div>
+
+  <!-- ---------- JAVASCRIPT FOR THEME & YEAR ---------- -->
+  <script>
+    const body = document.body;
+    const toggleBtn = document.getElementById("theme-toggle");
+    const yearSpan = document.getElementById("year");
+
+    // Set current year in footer
+    yearSpan.textContent = new Date().getFullYear();
+
+    // Load saved theme from localStorage if available
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark" || savedTheme === "light") {
+      body.className = savedTheme;
+      toggleBtn.textContent =
+        savedTheme === "dark" ? "☀️ Light Mode" : "🌙 Dark Mode";
+    }
+
+    // Theme toggle function
+    toggleBtn.addEventListener("click", () => {
+      if (body.classList.contains("light")) {
+        body.classList.remove("light");
+        body.classList.add("dark");
+        toggleBtn.textContent = "☀️ Light Mode";
+        localStorage.setItem("theme", "dark");
+      } else {
+        body.classList.remove("dark");
+        body.classList.add("light");
+        toggleBtn.textContent = "🌙 Dark Mode";
+        localStorage.setItem("theme", "light");
+      }
+    });
+  </script>
+</body>
+</html>
